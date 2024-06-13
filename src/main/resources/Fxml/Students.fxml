@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.dawissem.crudajavafx.StudentController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <VBox layoutX="26.0" layoutY="54.0" prefHeight="262.0" prefWidth="298.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="110.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom" />
+                <TextField fx:id="tFName" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" />
+                <TextField fx:id="tLastName" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date de Naissance" />
+                <TextField fx:id="tBirth" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cours" />
+                <TextField fx:id="tCourse" />
+            </children>
+        </VBox>
+        <TableView fx:id="table" layoutX="331.0" layoutY="110.0" onMouseClicked="#getData" prefHeight="314.0" prefWidth="415.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colfName" prefWidth="75.0" text="Prénom" />
+                <TableColumn fx:id="collName" prefWidth="75.0" text="Nom" />
+                <TableColumn fx:id="colBirthDate" prefWidth="116.0" text="Date de  naissance" />
+                <TableColumn fx:id="colCourse" prefWidth="73.0" text="Cours" />
+            </columns>
+        </TableView>
+        <Label alignment="CENTER" layoutX="164.0" layoutY="37.0" prefHeight="35.0" prefWidth="338.0" styleClass="title" text="Gestion des étudiants" />
+        <ButtonBar layoutX="142.0" layoutY="441.0" prefHeight="59.0" prefWidth="469.0">
+            <buttons>
+                <Button fx:id="btnSave" alignment="CENTER" minWidth="60.0" mnemonicParsing="false" onAction="#creatStudent" prefHeight="13.0" text="Enregistrer" />
+                <Button fx:id="btnUpdate" layoutX="275.0" layoutY="10.0" minWidth="60.0" mnemonicParsing="false" onAction="#updateStudent" prefHeight="13.0" text="Modifier" />
+                <Button fx:id="btnDelete" layoutX="189.0" layoutY="10.0" minWidth="60.0" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="13.0" text="Supprimer" />
+                <Button fx:id="btnClear" layoutX="104.0" layoutY="10.0" minWidth="60.0" mnemonicParsing="false" onAction="#clearStudent" prefHeight="13.0" text="nettoyer" />
+            </buttons>
+        </ButtonBar>
+    </children>
+</AnchorPane>
